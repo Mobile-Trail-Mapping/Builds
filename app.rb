@@ -1,9 +1,10 @@
-ENV['GEM_PATH'] = '/home/brousali/gems'
-ENV['GEM_HOME'] = '/home/brousali/gems'
+#ENV['GEM_PATH'] = '/home/brousali/gems'
+#ENV['GEM_HOME'] = '/home/brousali/gems'
 
 require 'rubygems'
 require 'sinatra'
 require 'haml'
+require 'rspec'
 
 class Build
     attr_accessor :date, :branch, :ext, :version
@@ -47,4 +48,10 @@ get '/' do
     end
     Dir.chdir(@dir)
     haml :index
+end
+
+describe "parseBuilds test" do
+  it "should do some shit" do
+    parseBuilds("name").should == {}
+  end
 end
