@@ -7,8 +7,9 @@ require 'haml'
 #require 'rspec'
 
 class Build
-    attr_accessor :date, :branch, :ext, :version
-    def initialize(date, branch, ext, version=0)
+    attr_accessor :filename, :date, :branch, :ext, :version
+    def initialize(filename, date, branch, ext, version=0)
+        @filename = filename
         @date = date
         @branch = branch
         @ext = ext
@@ -26,9 +27,9 @@ def parseBuilds(name)
         ext = File.extname(filename)
         if name != "stable"
             hash[date] ||= [] #check if exists, init
-            hash[date] << Build.new(date, branch.chomp(ext), ext)
+            hash[date] << Build.new(filename, date, branch.chomp(ext), ext)
         else
-            hash[ext] = Build.new(date, branch, ext, file[3].chomp(ext))
+            hash[ext] = Build.new(filename, date, branch, ext, file[3].chomp(ext))
         end
     }
     Dir.chdir("../")
