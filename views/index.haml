@@ -41,7 +41,7 @@
 							- if @stable[key].ext == ".apk"
 								%strong #{@stable[key].date}
 								.clearfix
-								%a.button.green.r10.CtaThk{:href => "/stable/#{@stable[key].filename}"}
+								%a.button.green.r10.CtaThk{:href => "stable/#{@stable[key].filename}"}
 									%span.button-text
 										%span.text-big Download for Android
 										%br
@@ -60,7 +60,7 @@
 								%ul
 									- @android[key].each do |build|
 										%li 
-											%a{:href=>"/android/#{build.filename}"} 
+											%a{:href=>"android/#{build.filename}"} 
 												%span Download
 												#{build.branch}
 				.clearfix
@@ -85,7 +85,7 @@
 							- if @stable[key].ext == ".ipa"
 								%strong #{@stable[key].date}
 								.clearfix
-								%a.button.darkblue.r10.CtaThk{:href => "/stable/#{@stable[key].filename}"}
+								%a.button.darkblue.r10.CtaThk{:href => "stable/#{@stable[key].filename}"}
 									%span.button-text
 										%span.text-big Download for iPhone
 										%br
@@ -104,7 +104,7 @@
 								%ul
 									- @iphone[key].each do |build|
 										%li 
-											%a{:href=>"/android/#{build.filename}"} 
+											%a{:href=>"iphone/#{build.filename}"} 
 												%span Download
 												#{build.branch}
 				.clearfix
