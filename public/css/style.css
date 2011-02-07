@@ -6,7 +6,6 @@
 60px 144px 228px 312px 396px 480px 564px 648px */
 body{background:rgb(232,232,232);font-family:Georgia,Palatino,'Palatino Linotype',Times,'Times New Roman',serif;padding:84px 60px 0;width:648px;margin:0px auto;-webkit-tap-highlight-color:rgb(255,255,0);background:#e6e6e6 no-repeat -moz-linear-gradient(top,#fafafa,#e6e6e6 58%);background:#e6e6e6 no-repeat -webkit-gradient(linear,0 0,0 58%,from(#fafafa),to(#e6e6e6));}
 a{color:#000;text-decoration:none;display:inline;}
-a{-webkit-transition:color 0.3s ease,border-bottom 0.3s ease;-moz-transition:color 0.3s ease,border-bottom 0.3s ease;-o-transition:color 0.3s ease,border-bottom 0.3s ease;transition:color 0.3s ease,border-bottom 0.3s ease;}
 a:hover{color:green;}
 #container{padding:10px 0 0 0;position:relative;width:100%;}
 #container h3{margin:0 auto;text-align:center;font-size:36px;text-shadow:0px 1px 0px #fff;}
@@ -18,7 +17,7 @@ a:hover{color:green;}
 #container .download-box p{line-height:1.5;color:#9D9D9D;margin-bottom:30px;}
 #container .download-box p strong{border-bottom: 1px dotted #f3f3f3;}
 #container .download-box h4{font-size:32px;line-height:36px;margin-bottom:9px;}
-#container .download-box h5{font-size:18px;margin-bottom:1em;}
+#container .download-box h5{font-size:18px;margin-bottom:0.4em;}
 #container .download-box h5 em{color:#999;text-transform:none;}
 #container .download-box .box-content{background:#fff;padding:20px 20px 20px 20px;width:420px;font-size:18px;}
 #container #iphone .box-content{background:white url(../images/iphone.png) no-repeat 380px 16px;}
@@ -29,7 +28,7 @@ a:hover{color:green;}
 #container .button:active{top:2px;}
 
 #container #nightly ul {list-style-type: none;}
-#container #nightly ul li {padding: 10px; background: #f0f0f0;margin-bottom: 3px;opacity:0.8;filter:alpha(opacity=80);}
+#container #nightly ul li {padding: 10px; padding-bottom: 15px; background: #f0f0f0;margin-bottom: 3px;opacity:0.8;filter:alpha(opacity=80);}
 #container #nightly ul li.alt {background-color: #fff}
 #container #nightly ul li img {padding-right: 7px;}
 #container #nightly ul li ul {padding-top: 8px;}
