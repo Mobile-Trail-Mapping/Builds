@@ -39,9 +39,6 @@
 						Latest stable release:
 						- if @stable.ext == ".apk"
 							%strong #{@stable.date}
-							%br
-							Version:
-							%strong #{@stable.version}
 							.clearfix
 							%a.button.green.r10.CtaThk{:href => "#"}
 								%span.button-text
@@ -60,14 +57,17 @@
 								%a.head{:href => "#"} #{key}
 								%ul
 									- @android[key].each do |build|
-										%li= build.branch
+										%li 
+											%a{:href=>"#"} 
+												%span Download
+												#{build.branch}
 				.clearfix
 				.nightly-toggle
 					%span 
 						latest 12/16/12
 					%a{:href => "#nightly"} Nightly builds
 				.stable-toggle
-					%a{:href => "#stable"} Stable build
+					%a{:href => "#stable"} Stable builds
 						
 	%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"}
 	%script{:src => "js/libs/third.js"}

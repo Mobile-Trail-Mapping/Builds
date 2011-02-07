@@ -1,14 +1,17 @@
-
 $(document).ready(function(){
 
 	// Fancy indents
 	
-	$(".nightly-toggle a, .stable-toggle a, #nightly li a").hover(function(){
-		$(this).stop().animate({marginLeft:'5px'},{queue:false, duration:300, easing: 'easeOutQuart'})
+	$(".nightly-toggle a, .stable-toggle a").hover(function(){
+		$(this).stop().animate({marginLeft:'5px'},{queue:false, duration:300})
 	},function(){
-		$(this).stop().animate({marginLeft:'0px'},{queue:false, duration:300, easing: 'easeOutQuart'})
+		$(this).stop().animate({marginLeft:'0px'},{queue:false, duration:300})
 	});
-
+	$("#nightly ul li ul li").hover(function(){
+		$(this).stop().animate({backgroundPosition:'95% 60%'},{queue:false, duration:300})
+	},function(){
+		$(this).stop().animate({backgroundPosition:'95% 50%'},{queue:false, duration:300})
+	});
 	// Content Sliding
 	
 	$("#android .tab-content, #iphone .tab-content").hide(); 
