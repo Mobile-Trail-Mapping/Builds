@@ -7,9 +7,9 @@ $(document).ready(function(){
 		$(this).stop().animate({marginLeft:'0px'},{queue:false, duration:300})
 	});
 	$("#nightly ul li ul li").hover(function(){
-		$(this).stop().animate({backgroundPosition:'95% 60%'},{queue:false, duration:300})
+		$(this).stop().animate({backgroundPosition:'100% 60%'},{queue:false, duration:300})
 	},function(){
-		$(this).stop().animate({backgroundPosition:'95% 50%'},{queue:false, duration:300})
+		$(this).stop().animate({backgroundPosition:'100% 50%'},{queue:false, duration:300})
 	});
 	// Content Sliding
 	

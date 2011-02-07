@@ -37,7 +37,7 @@ def parseBuilds(name)
     return hash
 end
 
-get '/' do
+get '/?' do
     @dir = Dir.getwd
     begin
         @stable = parseBuilds("stable")[:stable]

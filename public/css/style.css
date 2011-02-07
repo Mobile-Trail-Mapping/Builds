@@ -31,8 +31,9 @@ a:hover{color:green;}
 #container #nightly ul {list-style-type: none;}
 #container #nightly ul li {padding: 10px; background: #f0f0f0;margin-bottom: 3px;opacity:0.8;filter:alpha(opacity=80);}
 #container #nightly ul li.alt {background-color: #fff}
+#container #nightly ul li img {padding-right: 7px;}
 #container #nightly ul li ul {padding-top: 8px;}
-#container #nightly ul li ul li {display:block;padding: 2px 25px; background:url(../images/arrow-down.png) no-repeat 95% 50%;}
+#container #nightly ul li ul li {display:block;padding: 2px 5px; background:url(../images/download.png) no-repeat 100% 50%;}
 #container #nightly ul li ul li span {float:right; padding-right: 20px;}
 #container #nightly ul li ul li a {display: block;position:relative;width:100%;}
 #container #nightly ul li ul li a:active {top:1px;}

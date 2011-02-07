@@ -54,6 +54,7 @@
 					%ul
 						- @android.keys.sort.each do |key|
 							%li
+								%img{:src => "images/cal.png"}
 								%a.head{:href => "#"} #{key}
 								%ul
 									- @android[key].each do |build|
