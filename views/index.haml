@@ -55,7 +55,7 @@
 					%ul
 						- @android.keys.sort.each do |key|
 							%li
-								%img{:src => "images/cal.png"}
+								%img{:src => "images/calendar.png"}
 								%a.head{:href => "#"} #{key}
 								%ul
 									- @android[key].each do |build|
@@ -99,7 +99,7 @@
 					%ul
 						- @iphone.keys.sort.each do |key|
 							%li
-								%img{:src => "images/cal.png"}
+								%img{:src => "images/calendar.png"}
 								%a.head{:href => "#"} #{key}
 								%ul
 									- @iphone[key].each do |build|
@@ -115,6 +115,11 @@
 				.stable-toggle
 					%a{:href => "#stable"} Stable builds
 								
+	.clearfix
+	
+	#footer
+		%p &copy; Copyright MTM Team
+
 	%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"}
 	%script{:src => "js/libs/third.js"}
 	%script{:src => "js/plugins.js"}
