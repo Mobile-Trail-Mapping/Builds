@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
 	// Fancy indents
-	
 	$(".nightly-toggle a, .stable-toggle a").hover(function(){
 		$(this).stop().animate({marginLeft:'5px'},{queue:false, duration:300})
 	},function(){
