@@ -18,7 +18,6 @@ end
 
 def parseBuilds(name)
     hash = {}
-    puts Dir.pwd
     Dir.chdir(name) 
     Dir.glob("*") { |filename|
         file = filename.split("_")
@@ -29,24 +28,23 @@ def parseBuilds(name)
             hash[date] ||= [] #check if exists, init
             hash[date] << Build.new(date, branch.chomp(ext), ext)
         else
-            hash[:stable] = Build.new(date, branch, ext, file[3].chomp(ext))
+            hash[ext] = Build.new(date, branch, ext, file[3].chomp(ext))
         end
     }
     Dir.chdir("../")
-    puts Dir.pwd
     return hash
 end
 
 get '/?' do
     @dir = Dir.getwd
     begin
-        @stable = parseBuilds("stable")[:stable]
+        @stable = parseBuilds("stable")
         @android = parseBuilds("android")
-        #@iphone = parseBuilds("iphone")
+        @iphone = parseBuilds("iphone")
     rescue
         @android = []
         @stable = []
-        #@iphone = []
+        @iphone = []
     end
     Dir.chdir(@dir)
     haml :index

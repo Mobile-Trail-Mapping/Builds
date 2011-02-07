@@ -37,19 +37,20 @@
 						and above
 					%p
 						Latest stable release:
-						- if @stable.ext == ".apk"
-							%strong #{@stable.date}
-							.clearfix
-							%a.button.green.r10.CtaThk{:href => "#"}
-								%span.button-text
-									%span.text-big Download for Android
-									%br
-									%span.text-small
-										version number
-										%strong #{@stable.version}
-								%span.round
-									%span.arrow-tail
-										%span.arrow-head
+						- @stable.keys.sort.each do |key|
+							- if @stable[key].ext == ".apk"
+								%strong #{@stable[key].date}
+								.clearfix
+								%a.button.green.r10.CtaThk{:href => "#"}
+									%span.button-text
+										%span.text-big Download for Android
+										%br
+										%span.text-small
+											version number
+											%strong #{@stable[key].version}
+									%span.round
+										%span.arrow-tail
+											%span.arrow-head
 				#nightly.tab-content
 					%ul
 						- @android.keys.sort.each do |key|
@@ -69,7 +70,51 @@
 					%a{:href => "#nightly"} Nightly builds
 				.stable-toggle
 					%a{:href => "#stable"} Stable builds
-						
+			
+		#iphone.download-box
+			.box-content
+				#stable.tab-content
+					%h4 iPhone
+					%h5 
+						For
+						%em iOS 4.0
+						and above
+					%p
+						Latest stable release:
+						- @stable.keys.sort.each do |key|
+							- if @stable[key].ext == ".ipa"
+								%strong #{@stable[key].date}
+								.clearfix
+								%a.button.darkblue.r10.CtaThk{:href => "#"}
+									%span.button-text
+										%span.text-big Download for iPhone
+										%br
+										%span.text-small
+											version number
+											%strong #{@stable[key].version}
+									%span.round
+										%span.arrow-tail
+											%span.arrow-head
+				#nightly.tab-content
+					%ul
+						- @iphone.keys.sort.each do |key|
+							%li
+								%img{:src => "images/cal.png"}
+								%a.head{:href => "#"} #{key}
+								%ul
+									- @iphone[key].each do |build|
+										%li 
+											%a{:href=>"#"} 
+												%span Download
+												#{build.branch}
+				.clearfix
+				.nightly-toggle
+					%span 
+						latest 12/16/12
+					%a{:href => "#nightly"} Nightly builds
+				.stable-toggle
+					%a{:href => "#stable"} Stable builds
+								
 	%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"}
 	%script{:src => "js/libs/third.js"}
 	%script{:src => "js/plugins.js"}
