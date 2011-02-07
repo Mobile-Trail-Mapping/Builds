@@ -4,7 +4,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'haml'
-require 'rspec'
+#require 'rspec'
 
 class Build
     attr_accessor :date, :branch, :ext, :version
