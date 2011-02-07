@@ -18,6 +18,7 @@ end
 
 def parseBuilds(name)
     hash = {}
+    puts Dir.pwd
     Dir.chdir(name) 
     Dir.glob("*") { |filename|
         file = filename.split("_")
@@ -32,6 +33,7 @@ def parseBuilds(name)
         end
     }
     Dir.chdir("../")
+    puts Dir.pwd
     return hash
 end
 
@@ -50,8 +52,8 @@ get '/' do
     haml :index
 end
 
-describe "parseBuilds test" do
-  it "should do some shit" do
-    parseBuilds("name").should == {}
-  end
-end
+#describe "parseBuilds test" do
+#  it "should do some shit" do
+#    parseBuilds("name").should == {}
+#  end
+#end
