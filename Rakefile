@@ -21,5 +21,5 @@ task :touch do
 end
 
 desc 'Publish and sync'
-  task :p => [:sync, :push, :touch] do
+  task :p => [:push, :sync, :touch] do
 end

@@ -1,5 +1,4 @@
 *.DS_Store
-IconStaging/
-secret.xml
-photos/
-tmp/
+android/
+stable/
+iphone/
